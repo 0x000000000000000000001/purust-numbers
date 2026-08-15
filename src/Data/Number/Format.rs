@@ -1,4 +1,0 @@
-
-pub fn Data_Number_Format_toPrecisionNative() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
-pub fn Data_Number_Format_toFixedNative() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
-pub fn Data_Number_Format_toExponentialNative() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
