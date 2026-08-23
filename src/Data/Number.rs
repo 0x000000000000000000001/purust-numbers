@@ -39,16 +39,16 @@ pub fn Data_Number_tan(mut a0: crate::UnknownType) -> crate::UnknownType { crate
 pub fn Data_Number_trunc(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().trunc()) }
 
 pub fn Data_Number_fromStringImpl() -> crate::UnknownType {
-    crate::Value::Func(std::rc::Rc::new(move |mut str_val: crate::UnknownType| -> crate::UnknownType {
+    crate::Value::Func1(purust_core::Func1::Shared(std::rc::Rc::new(move |mut str_val: crate::UnknownType| -> crate::UnknownType {
         let str_c1 = str_val.clone();
-        crate::Value::Func(std::rc::Rc::new(move |mut isFinite: crate::UnknownType| -> crate::UnknownType {
+        crate::Value::Func1(purust_core::Func1::Shared(std::rc::Rc::new(move |mut isFinite: crate::UnknownType| -> crate::UnknownType {
             let str_c2 = str_c1.clone();
             let isF_c1 = isFinite.clone();
-            crate::Value::Func(std::rc::Rc::new(move |mut just: crate::UnknownType| -> crate::UnknownType {
+            crate::Value::Func1(purust_core::Func1::Shared(std::rc::Rc::new(move |mut just: crate::UnknownType| -> crate::UnknownType {
                 let str_c3 = str_c2.clone();
                 let isF_c2 = isF_c1.clone();
                 let just_c1 = just.clone();
-                crate::Value::Func(std::rc::Rc::new(move |mut nothing: crate::UnknownType| -> crate::UnknownType {
+                crate::Value::Func1(purust_core::Func1::Shared(std::rc::Rc::new(move |mut nothing: crate::UnknownType| -> crate::UnknownType {
                     if let Ok(parsed) = str_c3.unwrap_string().parse::<f64>() {
                         let num = crate::mk_number(parsed);
                         let is_fin = isF_c2.unwrap_func1()(num.clone());
@@ -57,8 +57,8 @@ pub fn Data_Number_fromStringImpl() -> crate::UnknownType {
                         }
                     }
                     nothing.clone()
-                }))
-            }))
-        }))
-    }))
+                })))
+            })))
+        })))
+    })))
 }
