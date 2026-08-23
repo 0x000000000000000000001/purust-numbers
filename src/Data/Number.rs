@@ -51,9 +51,9 @@ pub fn Data_Number_fromStringImpl() -> crate::UnknownType {
                 crate::Value::Func(std::rc::Rc::new(move |mut nothing: crate::UnknownType| -> crate::UnknownType {
                     if let Ok(parsed) = str_c3.unwrap_string().parse::<f64>() {
                         let num = crate::mk_number(parsed);
-                        let is_fin = isF_c2.unwrap_func()(num.clone());
+                        let is_fin = isF_c2.unwrap_func1()(num.clone());
                         if is_fin.unwrap_bool() {
-                            return just_c1.unwrap_func()(num);
+                            return just_c1.unwrap_func1()(num);
                         }
                     }
                     nothing.clone()
