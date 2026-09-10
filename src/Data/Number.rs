@@ -1,42 +1,42 @@
-pub fn Data_Number_isFinite(mut a0: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_bool(a0.unwrap_number().is_finite())
+pub fn Data_Number_isFinite(a0: f64) -> bool {
+    a0.is_finite()
 }
 
-pub fn Data_Number_floor(mut a0: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_number(a0.unwrap_number().floor())
+pub fn Data_Number_floor(a0: f64) -> f64 {
+    a0.floor()
 }
 
-pub fn Data_Number_ceil(mut a0: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_number(a0.unwrap_number().ceil())
+pub fn Data_Number_ceil(a0: f64) -> f64 {
+    a0.ceil()
 }
 
-pub fn Data_Number_round(mut a0: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_number(a0.unwrap_number().round())
+pub fn Data_Number_round(a0: f64) -> f64 {
+    a0.round()
 }
 
-pub fn Data_Number_abs(mut a0: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_number(a0.unwrap_number().abs())
+pub fn Data_Number_abs(a0: f64) -> f64 {
+    a0.abs()
 }
 
-pub fn Data_Number_acos(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().acos()) }
-pub fn Data_Number_asin(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().asin()) }
-pub fn Data_Number_atan(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().atan()) }
-pub fn Data_Number_atan2(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().atan2(a1.unwrap_number())) }
-pub fn Data_Number_cos(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().cos()) }
-pub fn Data_Number_exp(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().exp()) }
-pub fn Data_Number_infinity() -> crate::UnknownType { crate::mk_number(std::f64::INFINITY) }
-pub fn Data_Number_isNaN(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_bool(a0.unwrap_number().is_nan()) }
-pub fn Data_Number_log(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().ln()) }
-pub fn Data_Number_max(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().max(a1.unwrap_number())) }
-pub fn Data_Number_min(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().min(a1.unwrap_number())) }
-pub fn Data_Number_nan() -> crate::UnknownType { crate::mk_number(std::f64::NAN) }
-pub fn Data_Number_pow(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().powf(a1.unwrap_number())) }
-pub fn Data_Number_remainder(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number() % a1.unwrap_number()) }
-pub fn Data_Number_sign(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().signum()) }
-pub fn Data_Number_sin(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().sin()) }
-pub fn Data_Number_sqrt(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().sqrt()) }
-pub fn Data_Number_tan(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().tan()) }
-pub fn Data_Number_trunc(mut a0: crate::UnknownType) -> crate::UnknownType { crate::mk_number(a0.unwrap_number().trunc()) }
+pub fn Data_Number_acos(a0: f64) -> f64 { a0.acos() }
+pub fn Data_Number_asin(a0: f64) -> f64 { a0.asin() }
+pub fn Data_Number_atan(a0: f64) -> f64 { a0.atan() }
+pub fn Data_Number_atan2(a0: f64, a1: f64) -> f64 { a0.atan2(a1) }
+pub fn Data_Number_cos(a0: f64) -> f64 { a0.cos() }
+pub fn Data_Number_exp(a0: f64) -> f64 { a0.exp() }
+pub fn Data_Number_infinity() -> f64 { std::f64::INFINITY }
+pub fn Data_Number_isNaN(a0: f64) -> bool { a0.is_nan() }
+pub fn Data_Number_log(a0: f64) -> f64 { a0.ln() }
+pub fn Data_Number_max(a0: f64, a1: f64) -> f64 { a0.max(a1) }
+pub fn Data_Number_min(a0: f64, a1: f64) -> f64 { a0.min(a1) }
+pub fn Data_Number_nan() -> f64 { std::f64::NAN }
+pub fn Data_Number_pow(a0: f64, a1: f64) -> f64 { a0.powf(a1) }
+pub fn Data_Number_remainder(a0: f64, a1: f64) -> f64 { a0 % a1 }
+pub fn Data_Number_sign(a0: f64) -> f64 { a0.signum() }
+pub fn Data_Number_sin(a0: f64) -> f64 { a0.sin() }
+pub fn Data_Number_sqrt(a0: f64) -> f64 { a0.sqrt() }
+pub fn Data_Number_tan(a0: f64) -> f64 { a0.tan() }
+pub fn Data_Number_trunc(a0: f64) -> f64 { a0.trunc() }
 
 pub fn Data_Number_fromStringImpl() -> crate::UnknownType {
     crate::Value::Func1(purust_core::Func1::Shared(std::rc::Rc::new(move |mut str_val: crate::UnknownType| -> crate::UnknownType {
