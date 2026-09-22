@@ -1,0 +1,109 @@
+nan /= nan
+not (isNaN 6.0)
+isNaN nan
+infinity > 0.0
+-infinity < 0.0
+not (isFinite infinity)
+isFinite 0.0
+Data.Number.fromString
+	valid number string
+	invalid number string
+	too large numbers
+Data.Number.isNaN
+	Check for NaN
+Data.Number.isFinite
+	Check for infinity
+Data.Format.toStringWith
+	precision
+	fixed
+	exponential
+Data.Format.toString
+	toString
+Data.Number.Approximate.eqRelative
+	eqRelative
+	eqRelative (large numbers)
+	eqRelative (small numbers)
+	eqRelative (negative numbers)
+	eqRelative (close or equal to 0.0)
+	eqRelative (fraction = 0.0)
+	eqRelative (fraction > 1.0)
+Data.Number.Approximate.eqApproximate
+	0.1 + 0.2 ≅ 0.3
+Data.Number.Approximate.eqAbsolute
+	eqAbsolute
+	eqAbsolute (compare against 0)
+Data.Number.sin
+  sin 0.0 = 0.0
+  sin (pi / 4.0) = sqrt1_2
+  sin (pi / 2.0) = 1.0
+  sin pi = 0.0
+  sin tau = 0.0
+Data.Number.cos
+  cos 0.0 = 1.0
+  cos (pi / 4.0) = sqrt1_2
+  cos (pi / 2.0) = 0.0
+  cos pi = -1.0
+  cos tau = 1.0
+Data.Number.tan
+  tan 0.0 = 0.0
+  tan (pi / 4.0) = 1.0
+  tan pi = 0.0
+  tan tau = 0.0
+Data.Number.asin
+  asin (sin 0.0) = 0.0
+  asin (sin pi / 4.0) = pi / 4.0
+  asin (sin pi / 2.0) = pi / 2.0
+Data.Number.acos
+  acos (cos 0.0) = 0.0
+  acos (cos pi / 4.0) = pi / 4.0
+  acos (cos pi / 2.0) = pi / 2.0
+Data.Number.atan
+  atan (tan 0.0) = 0.0
+  atan (tan pi / 4.0) = pi / 4.0
+  atan (tan pi / 2.0) = pi / 2.0
+Data.Number.atan2
+  atan2 1.0 2.0 = atan (1.0 / 2.0)
+Data.Number.log
+  log 2.0 = ln2
+  log 10.0 = ln10
+Data.Number.exp
+  exp ln2 = 2.0
+  exp ln10 = 10.0
+Data.Number.abs
+  abs pi = pi
+  abs (-pi) = pi
+Data.Number.sign
+  sign pi = 1.0
+  sign (-pi) = -1.0
+Data.Number.sqrt
+  sqrt 2.0 = sqrt2
+  sqrt (1.0 / 2.0) = sqrt1_2
+Data.Number.pow
+  2.0 `pow` (1.0 / 2.0) = sqrt2
+Data.Number.min
+  min 0.0 1.0 = 0.0
+Data.Number.max
+  max 0.0 1.0 = 1.0
+Data.Number rounding
+  ceil 4.7 = 5.0
+  floor 4.7 = 4.0
+  round 4.7 = 5.0
+  trunc 4.7 = 4.0
+  ceil (-4.7) = -4.0
+  floor (-4.7) = -5.0
+  round (-4.7) = -5.0
+  trunc (-4.7) = -4.0
+  ceil 4.3 = 5.0
+  floor 4.3 = 4.0
+  round 4.3 = 4.0
+  trunc 4.3 = 4.0
+  ceil (-4.3) = -4.0
+  floor (-4.3) = -5.0
+  round (-4.3) = -4.0
+  trunc (-4.3) = -4.0
+Data.Number.remainder (%)
+  12.0 % 5.0 = 2.0
+  (-12.0) % 5.0 = 2.0
+Data.Number constants
+  log10e = 1.0 / ln10
+  log2e = 1.0 / ln2
